@@ -12,7 +12,7 @@ import styles from '../styles/components/Profile.module.css'
        <div>
          <strong>Diego Fernandes</strong>
          <p>
-           <img src="icons/level.svg" alt="Level" />
+           <img src="icons/up.svg" alt="Level" />
            Level 1
          </p>
        </div>
