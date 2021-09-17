@@ -50,6 +50,7 @@ export function CountdownProvider(props: CountdownProviderProps) {
     clearTimeout(countdownTimeout)
     setIsActive(false)
     setTime(INITIAL_TIME)
+    setHasFinished(false)
   }
 
   return (
