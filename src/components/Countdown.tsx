@@ -2,9 +2,13 @@ import { useState, useEffect } from 'react'
 
 import styles from '../styles/components/Countdown.module.css'
 
+let countdownTimeout: NodeJS.Timeout
+
 export function Countdown () {
-  const [time, setTime] =  useState(25 * 60)
+  const INITIAL_TIME = 0.1 * 60 // 25 minutes
+  const [time, setTime] =  useState(INITIAL_TIME)
   const [isActive, setIsActive] = useState(false)
+  const [hasFinished, setHasFinished] = useState(false)
 
   const minutes = Math.floor(time / 60); // round down...
   const seconds = time % 60; // rest of division...
@@ -14,14 +18,56 @@ export function Countdown () {
 
   useEffect(() => {
     if (isActive && time > 0) {
-      setTimeout(() => {
+      countdownTimeout = setTimeout(() => {
         setTime(prevState => prevState - 1)
       }, 1000)
+    } else if (isActive && time === 0) {
+      setHasFinished(true)
+      setIsActive(false)
     }
   }, [isActive, time])
 
   function startCountdown () {
     setIsActive(true)
+  }
+
+  function resetCountdown () {
+    clearTimeout(countdownTimeout)
+    setIsActive(false)
+    setTime(INITIAL_TIME)
+  }
+
+  const ComponentByStatus = () => {
+    if (hasFinished) {
+      return (
+        <button 
+          disabled
+          className={styles.countdownButton}
+        >
+          Ciclo encerrado
+        </button>
+      )
+    }
+    if (isActive) {
+      return (
+        <button 
+          type="button" 
+          onClick={resetCountdown} 
+          className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
+        >
+          Abandonar ciclo
+        </button>
+      )
+    }
+    return (
+      <button 
+        type="button" 
+        onClick={startCountdown} 
+        className={styles.countdownButton}
+      >
+        Inicar um ciclo
+      </button>
+    )
   }
  
   return (
@@ -38,9 +84,7 @@ export function Countdown () {
         </div>
       </div>
 
-      <button type="button" onClick={startCountdown} className={styles.countdownButton}>
-        Iniciar um ciclo
-      </button>
+      <ComponentByStatus />
     </div>
   )
 }
