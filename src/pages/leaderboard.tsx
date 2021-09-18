@@ -3,6 +3,8 @@ import styles from 'styles/pages/Leaderboard.module.css'
 
 import { AuthWrapper } from "layouts/AuthWrapper";
 
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
 export default function Leaderboard () {
   return (
     <AuthWrapper title="Leaderboard">
@@ -18,7 +20,7 @@ export default function Leaderboard () {
             </tr>
           </thead>
           <tbody>
-            {[0, 1, 3, 4, 5, 6, 7].map(item => (
+            {data.map(item => (
               <tr key={item}>
                 <td>1</td>
                 <td>
