@@ -3,7 +3,14 @@ import styles from 'styles/pages/Leaderboard.module.css'
 
 import { AuthWrapper } from "layouts/AuthWrapper";
 
-let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+const DATA = Array.from({ length: 5 }, (_, index) => index).map(item => ({
+  id: item + 1,
+  name: 'Diego Fernandes',
+  level: item + 3,
+  photo: 'https://github.com/diego3g.png',
+  completed: 1231,
+  xp: 12
+}))
 
 export default function Leaderboard () {
   return (
@@ -20,29 +27,29 @@ export default function Leaderboard () {
             </tr>
           </thead>
           <tbody>
-            {data.map(item => (
-              <tr key={item}>
-                <td>1</td>
+            {DATA.map((item, index) => (
+              <tr key={item.id}>
+                <td>{index + 1}</td>
                 <td>
                   <div>
                     <img 
-                      src="https://github.com/diego3g.png" 
-                      alt="Diego Fernandes" 
+                      src={item.photo} 
+                      alt={item.name} 
                     />
                     <div>
-                      <span>Diego Fernandes</span>
+                      <span>{item.name}</span>
                       <p>
                         <img src="icons/up.svg" alt="Level" />
-                        Level 1
+                        Level {item.level}
                       </p>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <b>187</b> completados
+                  <b>{item.completed}</b> completados
                 </td>
                 <td>
-                  <b>12312</b> xp
+                  <b>{item.xp}</b> xp
                 </td>
               </tr>
             ))}
