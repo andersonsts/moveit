@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 
 import { CompletedChallenges } from 'components/CompletedChallenges'
@@ -20,11 +19,7 @@ interface HomeProps {
 export default function Home(props: HomeProps) {
   return (
     <ChallengesProvider {...props}>
-      <AuthWrapper>
-        <Head>
-          <title>Home | move.it</title>
-        </Head>
-
+      <AuthWrapper title="Home">
         <ExperienceBar />
 
         <CountdownProvider>
