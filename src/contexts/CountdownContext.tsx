@@ -7,6 +7,7 @@ interface CountdownContextData {
   seconds: number;
   hasFinished: boolean;
   isActive: boolean;
+  percentage: number;
   startCountdown: () => void;
   resetCountdown: () => void;
 }
@@ -17,7 +18,7 @@ interface CountdownProviderProps {
 
 export const CountdownContext = createContext({} as CountdownContextData)
 
-const INITIAL_TIME = 25 * 60 // 25 minutes
+export const INITIAL_TIME = 1 * 60 // 25 minutes
 let countdownTimeout: NodeJS.Timeout
 
 export function CountdownProvider(props: CountdownProviderProps) {
@@ -29,6 +30,8 @@ export function CountdownProvider(props: CountdownProviderProps) {
 
   const minutes = Math.floor(time / 60); // round down...
   const seconds = time % 60; // rest of division...
+
+  let percentage = ((INITIAL_TIME - time) * 100) / INITIAL_TIME
 
   useEffect(() => {
     if (isActive && time > 0) {
@@ -61,7 +64,8 @@ export function CountdownProvider(props: CountdownProviderProps) {
       hasFinished,
       isActive,
       startCountdown,
-      resetCountdown
+      resetCountdown,
+      percentage
     }} {...props} />
   )
 }

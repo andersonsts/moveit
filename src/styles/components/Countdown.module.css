@@ -72,6 +72,22 @@
   color: var(--title);
 }
 
+.barLoading {
+  position: relative;
+  height: 4px;
+  border-radius: 0px 0px 5px 5px;
+  background:  #DCDDE0;
+  width: 100%;
+  bottom: 0px;
+}
+
+.barLoading span {
+  position: absolute;
+  height: 100%;
+  background: #4DD82B;
+  border-radius: 0px 0px 5px 5px;
+}
+
 .countdownButtonActive svg {
   margin-left: 16px;
   margin-bottom: -2px;
