@@ -1,9 +1,10 @@
 /* eslint-disable */
 
 import { useContext } from 'react'
-import { CountdownContext } from '../contexts/CountdownContext'
 
-import styles from '../styles/components/Countdown.module.css'
+import { CountdownContext } from 'contexts/CountdownContext'
+
+import styles from 'styles/components/Countdown.module.css'
 
 export function Countdown () {
   const { 

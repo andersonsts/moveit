@@ -1,5 +1,6 @@
 import { createContext, useState, ReactNode, useEffect } from 'react'
-import challenges from '../../challenges.json'
+
+import challenges from 'data/challenges.json'
 
 interface Challenge {
   type: 'body' | 'eye',
