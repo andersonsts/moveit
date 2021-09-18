@@ -60,6 +60,7 @@
 
 .countdownButtonFinished img {
   margin-left: 16px;
+  margin-bottom: -2px;
 }
 
 .countdownButton:not(:disabled):hover {
@@ -73,6 +74,7 @@
 
 .countdownButtonActive svg {
   margin-left: 16px;
+  margin-bottom: -2px;
 }
 
 .countdownButtonActive:not([disabled]):hover { 
