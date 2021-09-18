@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import styles from 'styles/components/SideBar.module.css'
+import styles from 'styles/components/CustomLink.module.css'
 
 interface CustomLink {
   children: ReactNode,

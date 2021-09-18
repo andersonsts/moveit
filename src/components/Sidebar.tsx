@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CustomLink } from './CustomLink'
+import { CustomLink } from 'components/CustomLink'
 
 import styles from 'styles/components/SideBar.module.css'
 
