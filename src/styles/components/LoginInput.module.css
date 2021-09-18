@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  margin-top: 40px;
+}
+
+.container input {
+  height: 80px;
+  border: 0;
+  background: linear-gradient(90deg, #4953B8 0%, rgba(73, 83, 184, 0.2) 100%);
+  border-radius: 5px 0px 0px 5px;
+  color: var(--purple);
+  font: 400 20px 'Inter', sans-serif;
+  padding: 23px 30px;
+}
+
+.container input::placeholder {
+  color: var(--purple);
+  font: 400 20px 'Inter', sans-serif;
+}
+
+.container button {
+  background: var(--blue-dark);
+  border-radius: 0px 5px 5px 0px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
