@@ -11,8 +11,6 @@ import { CountdownProvider } from 'contexts/CountdownContext';
 
 import { ChallengesProvider } from 'contexts/ChallengesContext'
 
-import styles from 'styles/pages/Home.module.css'
-
 interface HomeProps {
   level: number;
   currentExperience: number;
@@ -23,26 +21,24 @@ export default function Home(props: HomeProps) {
   return (
     <ChallengesProvider {...props}>
       <AuthWrapper>
-        <div className={styles.container}>
-          <Head>
-            <title>Home | move.it</title>
-          </Head>
+        <Head>
+          <title>Home | move.it</title>
+        </Head>
 
-          <ExperienceBar />
+        <ExperienceBar />
 
-          <CountdownProvider>
-            <section>
-              <div>
-                <Profile />
-                <CompletedChallenges />
-                <Countdown />
-              </div>
-              <div>
-                <ChallengeBox />
-              </div>
-            </section>
-          </CountdownProvider>
-        </div>
+        <CountdownProvider>
+          <section>
+            <div>
+              <Profile />
+              <CompletedChallenges />
+              <Countdown />
+            </div>
+            <div>
+              <ChallengeBox />
+            </div>
+          </section>
+        </CountdownProvider>
       </AuthWrapper>
     </ChallengesProvider>
   )

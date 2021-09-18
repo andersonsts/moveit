@@ -6,7 +6,9 @@ export function AuthWrapper ({ children }) {
   return (
     <div className={styles.home}>
       <SideBar />
-      {children}
+      <div className={styles.container}>
+        {children}
+      </div>
     </div>
   )
 }
