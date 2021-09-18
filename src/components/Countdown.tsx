@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useContext } from 'react'
 import { CountdownContext } from '../contexts/CountdownContext'
 
@@ -21,9 +23,10 @@ export function Countdown () {
       return (
         <button 
           disabled
-          className={styles.countdownButton}
+          className={`${styles.countdownButton} ${styles.countdownButtonFinished}`}
         >
           Ciclo encerrado
+          <img src="/icons/check_circle.svg" alt="Check circle" />
         </button>
       )
     }

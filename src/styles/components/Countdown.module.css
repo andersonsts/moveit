@@ -51,6 +51,17 @@
   transition: background-color 0.2s;
 } 
 
+.countdownButtonFinished {
+  border-bottom: 4px solid var(--green);
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.countdownButtonFinished img {
+  margin-left: 16px;
+}
+
 .countdownButton:not(:disabled):hover {
   background: var(--blue-dark);
 }
