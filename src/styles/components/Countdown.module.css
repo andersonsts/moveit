@@ -71,9 +71,17 @@
   color: var(--title);
 }
 
+.countdownButtonActive svg {
+  margin-left: 16px;
+}
+
 .countdownButtonActive:not([disabled]):hover { 
   background: var(--red);
   color: var(--white);
+}
+
+.countdownButtonActive:not([disabled]):hover svg { 
+  fill: var(--white);
 }
 
 .countdownButton:disabled {
