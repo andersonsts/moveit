@@ -4,10 +4,10 @@ import { useState } from 'react'
 import styles from 'styles/components/LoginInput.module.css'
 
 interface LoginInput {
-  onClick: () => void;
+  onClick?: () => void;
 }
 
-export function LoginInput ({ onclick }) {
+export function LoginInput ({ onclick = null }) {
   const [value, setValue] = useState('')
 
   return (

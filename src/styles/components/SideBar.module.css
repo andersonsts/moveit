@@ -1,0 +1,59 @@
+.container {
+  width: 9rem;
+  height: 100vh;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.container img {
+  position: absolute;
+  top: 2.8rem;
+  right: 50%;
+  transform: translateX(50%); 
+}
+
+.navBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.currentLink svg {
+  stroke: #5965E0;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.normalLink svg {
+  stroke: #666; 
+}
+
+.item svg {
+  transition: all 0.18s;
+}
+
+.item:hover svg {
+  stroke: #5965E0;
+}
+
+.itemBar {
+  position: absolute;
+  width: 0.4rem;
+  background: #5965E0;
+  height: 56px;
+  left: 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.item + .item {
+  margin-top: 4rem;
+}
