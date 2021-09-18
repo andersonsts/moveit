@@ -40,7 +40,11 @@ export function ChallengesProvider ({
   const [level, setLevel] = useState(rest.level ?? 1)
   const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0)
   const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0)
-  const [activeChallenge, setActiveChallenge] = useState(null)
+  const [activeChallenge, setActiveChallenge] = useState({
+    "type": "body",
+    "description": "Estique um de seus braços com a palma da mão virada para frente e puxe os dedos para cima",
+    "amount": 140
+  })
   const [isLevelUpModalOpen, setIsLevelModalOpen] = useState(false)
 
   useEffect(() => {
