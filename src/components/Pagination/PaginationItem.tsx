@@ -15,9 +15,9 @@ export function PaginationItem ({
 }: PaginationItemProps) {
   return isCurrent 
     ? <button className={`${styles.button} ${styles.currentButton}`}>
-        {number}
+        {/* {number} */}
       </button> 
     : <button className={`${styles.button} ${styles.normalButton}`} onClick={() => onPageChange(number)}>
-        {number}
+        {/* {number} */}
       </button>
 }
