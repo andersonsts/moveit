@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.currentButton {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+
+.normalButton {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+
+.button {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+}
+
+.button + .button {
+  margin-left: 12px;
+}
+
+.normalButton {
+  background: #e2e2e2;
+}
+
+.currentButton {
+  background: #7159c1;
+  color: #fff;
+}

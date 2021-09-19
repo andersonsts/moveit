@@ -1,18 +1,93 @@
 /* eslint-disable */
+import { useEffect, useState } from 'react';
+
 import styles from 'styles/pages/Leaderboard.module.css'
 
 import { AuthWrapper } from "layouts/AuthWrapper";
+import { Pagination } from 'components/Pagination';
 
-const DATA = Array.from({ length: 5 }, (_, index) => index).map(item => ({
-  id: item + 1,
-  name: 'Diego Fernandes',
-  level: item + 3,
-  photo: 'https://github.com/diego3g.png',
-  completed: 1231,
-  xp: 12
-}))
+const REGISTER_PER_PAGE = 4
+const DATA = [
+  {
+    id: 1,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  },
+  {
+    id: 2,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  },
+  {
+    id: 3,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  },
+  {
+    id: 4,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  },
+  {
+    id: 5,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  },
+  {
+    id: 6,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  },
+  {
+    id: 7,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  },
+  {
+    id: 8,
+    name: 'Diego',
+    level: 4,
+    photo: 'https://github.com/diego3g.png',
+    completed: 1231,
+    xp: 12
+  }
+]
 
 export default function Leaderboard () {
+  const [currentPage, setCurrentPage] = useState(1)
+  const [data, setData] = useState(DATA) 
+
+  useEffect(() => {
+    const startIndx = (currentPage - 1) * REGISTER_PER_PAGE
+    const endIndx =  REGISTER_PER_PAGE * currentPage
+    const updatedData = DATA.slice(startIndx, endIndx)
+    
+    setData(updatedData)
+  }, [currentPage])
+
+  console.log('data', data)
+
   return (
     <AuthWrapper title="Leaderboard">
       <div className={styles.container}>
@@ -27,9 +102,9 @@ export default function Leaderboard () {
             </tr>
           </thead>
           <tbody>
-            {DATA.map((item, index) => (
+            {data.map((item) => (
               <tr key={item.id}>
-                <td>{index + 1}</td>
+                <td>{item.id}</td>
                 <td>
                   <div>
                     <img 
@@ -55,6 +130,12 @@ export default function Leaderboard () {
             ))}
           </tbody>
         </table>
+        <Pagination 
+          totalCountOfRegisters={DATA.length}
+          registersPerPage={REGISTER_PER_PAGE}
+          currentPage={currentPage}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </AuthWrapper>
   )
