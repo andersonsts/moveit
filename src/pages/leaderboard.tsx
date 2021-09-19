@@ -3,76 +3,11 @@ import { useEffect, useState } from 'react';
 
 import styles from 'styles/pages/Leaderboard.module.css'
 
+import { Page } from 'components/Page';
 import { AuthWrapper } from "layouts/AuthWrapper";
-import { Pagination } from 'components/Pagination';
 
+import DATA from 'data/users.json'
 const REGISTER_PER_PAGE = 4
-const DATA = [
-  {
-    id: 1,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  },
-  {
-    id: 2,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  },
-  {
-    id: 3,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  },
-  {
-    id: 4,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  },
-  {
-    id: 5,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  },
-  {
-    id: 6,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  },
-  {
-    id: 7,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  },
-  {
-    id: 8,
-    name: 'Diego',
-    level: 4,
-    photo: 'https://github.com/diego3g.png',
-    completed: 1231,
-    xp: 12
-  }
-]
 
 export default function Leaderboard () {
   const [currentPage, setCurrentPage] = useState(1)
@@ -85,8 +20,6 @@ export default function Leaderboard () {
     
     setData(updatedData)
   }, [currentPage])
-
-  console.log('data', data)
 
   return (
     <AuthWrapper title="Leaderboard">
@@ -130,9 +63,9 @@ export default function Leaderboard () {
             ))}
           </tbody>
         </table>
-        <Pagination 
-          totalCountOfRegisters={DATA.length}
-          registersPerPage={REGISTER_PER_PAGE}
+        <Page 
+          totalRegisters={DATA.length}
+          perPage={REGISTER_PER_PAGE}
           currentPage={currentPage}
           onPageChange={setCurrentPage}
         />

@@ -1,42 +1,56 @@
 .container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 16px;
-  margin-top: 16px;
+  justify-content: center;
+  width: 100%;
 }
 
-.currentButton {
-  background-color: transparent;
-  border: none;
-  font-size: 14px;
+.container li {
+  list-style: none;
 }
 
-.normalButton {
-  background-color: transparent;
-  border: none;
-  font-size: 14px;
-}
-
-.button {
-  border-radius: 50%;
-  height: 24px;
+.active {
   width: 24px;
-}
-
-.button + .button {
-  margin-left: 12px;
-}
-
-.normalButton {
-  background: var(--gray-line);
-}
-
-.currentButton {
+  height: 24px;
+  border-radius: 50%;
   background: var(--blue);
-  color: var(--white);
 }
 
-.pagesInfo strong {
-  color: var(--text);
+.normalItem {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.container strong { 
+  font-size: 24px;
+}
+
+.container li { 
+  font-size: 16px;
+}
+
+.pageNumbers {
+  list-style: none;
+  display: flex;
+}
+
+.pageNumbers li {
+  padding: 10px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.container button {
+  font-size: 16px;
+  background-color: transparent;
+  color: #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+} 
+
+.container button:hover {
+  background: white;
+  color: black;
 }

@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container button {
+  font-size: 16px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: none;
+  transition: all 0.2s;
+}
+
+.container button:hover {
+  filter: brightness(0.94);
+}
+
+.container button + button {
+  margin-left: 8px;
+}
+
+.activeButton {
+  background: var(--blue);
+}
+
+.normalButton {
+  background: var(--gray-line);
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Diego",
+    "level": 4,
+    "photo": "https://github.com/diego3g.png",
+    "completed": 1231,
+    "xp": 12
+  },
+  {
+    "id": 2,
+    "name": "Pedro",
+    "level": 4,
+    "photo": "https://github.com/diego3g.png",
+    "completed": 231,
+    "xp": 1
+  },
+  {
+    "id": 3,
+    "name": "Richard",
+    "level": 12,
+    "photo": "https://github.com/diego3g.png",
+    "completed": 2312,
+    "xp": 4
+  },
+  {
+    "id": 4,
+    "name": "Jonh",
+    "level": 1,
+    "photo": "https://github.com/diego3g.png",
+    "completed": 212,
+    "xp": 21
+  },
+  {
+    "id": 5,
+    "name": "Harry",
+    "level": 2,
+    "photo": "https://github.com/diego3g.png",
+    "completed": 12,
+    "xp": 2
+  },
+  {
+    "id": 6,
+    "name": "Peter",
+    "level": 23,
+    "photo": "https://github.com/diego3g.png",
+    "completed": 2332,
+    "xp": 88
+  },
+  {
+    "id": 7,
+    "name": "Parker",
+    "level": 2,
+    "photo": "https://github.com/diego3g.png",
+    "completed": 233,
+    "xp": 888
+  }
+]
