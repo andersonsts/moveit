@@ -29,10 +29,11 @@
 }
 
 .normalButton {
-  background: #e2e2e2;
+  background: var(--background);
+  color: var(--text);
 }
 
 .currentButton {
-  background: #7159c1;
-  color: #fff;
+  background: var(--blue);
+  color: var(--white);
 }
