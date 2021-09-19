@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 16px;
   margin-top: 16px;
@@ -35,4 +35,8 @@
 .currentButton {
   background: var(--blue);
   color: var(--white);
+}
+
+.pagesInfo strong {
+  color: var(--text);
 }

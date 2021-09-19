@@ -37,9 +37,9 @@ const Pagination = ({
 
   return (
     <div className={styles.container}>
-      <div id="box">
+      {/* <div className={styles.pagesInfo}>
         <strong>{(currentPage - 1) * registersPerPage}</strong> - <strong>{Math.min(currentPage * registersPerPage, totalCountOfRegisters)}</strong> de <strong>{totalCountOfRegisters}</strong>
-      </div>
+      </div> */}
       <div id="row-inside">
         {currentPage > (1 + siblingsCount) && (
           <>
