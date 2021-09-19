@@ -9,7 +9,8 @@
 .formContainer {
   display: flex;
   flex-direction: column;
-  margin-left: 24rem;
+  justify-content: center;
+  margin-left: 10vw;
   height: 600px;
 }
 

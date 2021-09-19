@@ -29,8 +29,7 @@
 }
 
 .normalButton {
-  background: var(--background);
-  color: var(--text);
+  background: var(--gray-line);
 }
 
 .currentButton {
