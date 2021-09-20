@@ -13,6 +13,12 @@
   padding: 23px 30px;
 }
 
+@media (max-width: 1024px) {
+  .container input {
+    width: 18rem;
+  }
+}
+
 .container input::placeholder {
   color: var(--purple);
   font: 400 20px 'Inter', sans-serif;
