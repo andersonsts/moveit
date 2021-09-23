@@ -1,12 +1,26 @@
 .card {
   display: flex;
-  flex-direction: column;
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   max-width: 1024px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
 }
 
+.card + .card {
+  margin-top: 16px;
+}
 .card img {
   width: 5rem;
+  height: 5rem;
   border-radius: 50%;
+  flex-shrink: 0;
+}
+.info {
+  display: flex;
+  margin-left: 16px;
+}
+.info > strong {
+  font-size: 2rem; 
 }

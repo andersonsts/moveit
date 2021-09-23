@@ -1,3 +1,7 @@
+.container {
+  padding-bottom: 7.2rem;
+}
+
 .container h1 {
   color: #2E384D;
   font: 600 36px 'Inter', sans-serif;
