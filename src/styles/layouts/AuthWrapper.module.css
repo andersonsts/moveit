@@ -2,7 +2,7 @@
   display: flex;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .home {
     flex-direction: column-reverse;
   }
@@ -26,4 +26,14 @@
   gap: 6.25rem;
   align-content: center;
   margin-top: 48px;
+  padding-bottom: 0px;
+}
+
+@media (max-width: 1000px) {
+  .container section {
+    grid-template-columns: 1fr;
+    padding-bottom: 8rem;
+    max-width: 468px;
+    width: 100%;
+  }
 }

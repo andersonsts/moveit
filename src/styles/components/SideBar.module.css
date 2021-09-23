@@ -21,3 +21,33 @@
   justify-content: center;
   height: 100vh;
 }
+
+@media (max-width: 1000px) {
+  .container {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    height: 6rem;
+    max-height: 6rem;
+    width: 100vw;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.842) 100%);
+  }
+
+  .navBar {
+    flex-direction: row;
+    align-items: center;
+    height: 6rem;
+  }
+
+  .container img {
+    top: 50%;
+    left: 2.4rem;
+    transform: translateY(-48%);
+  }
+}
+
+@media (max-width: 500px) {
+  .container img {
+    display: none;
+  }
+}
