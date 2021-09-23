@@ -1,0 +1,12 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  max-width: 1024px;
+}
+
+.card img {
+  width: 5rem;
+  border-radius: 50%;
+}
