@@ -16,6 +16,7 @@ export function LeaderboardItem ({ id, name, level, photo, completed, xp }: Data
       <img src={photo} alt={name} />
       <div className={styles.info}>
         <strong>{id}</strong>
+        <strong>{level}</strong>
         {/* <span>{name}</span> */}
       </div>
     </div>
