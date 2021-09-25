@@ -1,6 +1,6 @@
-import styles from 'styles/test.module.css'
+import styles from 'styles/responsiviness.module.css'
 
-export default function Test() {
+export default function Responsiviness () {
   return (
     <div className={styles.container}>
       <div>
