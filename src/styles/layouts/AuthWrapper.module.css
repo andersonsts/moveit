@@ -2,13 +2,6 @@
   display: flex;
 }
 
-@media (max-width: 1000px) {
-  .home {
-    flex-direction: column-reverse;
-  }
-}
-
-
 .container {
   height: 100vh;
   max-width: 992px;
@@ -32,6 +25,12 @@
 }
 
 @media (max-width: 1000px) {
+  .home {
+    flex-direction: column-reverse;
+  }
+  .container {
+    padding: 0.8rem 2rem;
+  }
   .container section {
     grid-template-columns: 1fr;
     padding-bottom: 8rem;

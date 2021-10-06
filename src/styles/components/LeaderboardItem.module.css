@@ -7,11 +7,18 @@
   border-radius: 8px;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
   position: relative;
+  align-items: center;
 }
 
 .card + .card {
   margin-top: 16px;
 }
+@media (max-width: 390px) {
+  .card + .card {
+    margin-top: 8px;
+  }
+}
+
 .card img {
   width: 5rem;
   height: 5rem;
@@ -19,23 +26,72 @@
   flex-shrink: 0;
 }
 
-.informations {
+.information {
   display: flex;
   flex-direction: column;
 }
 
-.informations span {
+.information span {
   color: var(--blue);
   font-size: 1.2rem;
   margin-left: 12px;
   font-weight: bold;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
-  padding: 4px 2px;
+  padding: 4px;
   background: #fff;
   border-radius: 8px;
   position: absolute;
   left: 4px;
   top: 16px;
+}
+
+.informationItem {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.informationItem span {
+  margin-bottom: 16px;
+}
+
+.informationItem p {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.informationItem img {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 4px;
+}
+
+.informationItem + .informationItem {
+  margin-left: 8%;
+}
+
+.informationItem + .informationItem p {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  display: inline;
+}
+
+.informationItem + .informationItem p:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.informationItem + .informationItem b {
+  color: var(--blue);
+  margin-right: 4px;
+  font-size: 1rem;
+}
+
+span.userName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 4px;
 }
 
 .info {

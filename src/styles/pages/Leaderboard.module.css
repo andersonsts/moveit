@@ -1,5 +1,7 @@
 .container {
   padding-bottom: 7.2rem;
+  position: relative;
+  min-height: 600px;
 }
 
 .container h1 {

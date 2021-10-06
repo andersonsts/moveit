@@ -3,6 +3,22 @@
   align-items: center;
   justify-content: center;
   margin-top: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 534px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    top: 555px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    top: 500px;
+  }
 }
 
 .container button {
