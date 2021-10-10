@@ -32,7 +32,7 @@ jobs:
           restore-keys: |
             nodeModules-
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --production
+        run: yarn install --frozen-lockfile
         env:
           CI: true
 
