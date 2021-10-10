@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import styles from 'styles/pages/Leaderboard.module.css'
 
 import { Page } from 'components/Page';
-import { AuthWrapper } from "layouts/AuthWrapper";
+import { AuthWrapper } from 'layouts/AuthWrapper';
 
 import DATA from 'data/users.json'
 import { LeaderboardTable } from 'components/LeaderboardTable';

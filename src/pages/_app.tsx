@@ -1,13 +1,14 @@
+import { AppProps } from 'next/app';
 import Router from 'next/router';
-import 'styles/global.css'
 import NProgress from 'nprogress'; 
+import 'styles/global.css'
 import 'nprogress/nprogress.css'; 
 
 Router.events.on('routeChangeStart', () => NProgress.start()); 
 Router.events.on('routeChangeComplete', () => NProgress.done()); 
 Router.events.on('routeChangeError', () => NProgress.done());  
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Component {...pageProps} />
   )
