@@ -58,7 +58,7 @@ jobs:
         uses: actions/download-artifact@main
         with:
           name: build
-          # path: .docker/build
+          path: build
 
       - name: Setup gcloud CLI
         uses: google-github-actions/setup-gcloud@master
