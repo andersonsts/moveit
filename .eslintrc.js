@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
+    jest: true
   },
   extends: [
     'plugin:react/recommended',
@@ -36,6 +37,10 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': 'off',
-    'import/extensions': 'off'
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['jest.setup.ts', '**/*.test.tsx', '**/*.spec.tsx', '**/*.test.ts', '**/*.spec.ts'] }
+    ]
   },
 };

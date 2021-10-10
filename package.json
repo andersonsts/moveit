@@ -6,10 +6,14 @@
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.2.5",
     "js-cookie": "^3.0.1",
     "next": "11.1.2",
     "nprogress": "^0.2.0",
