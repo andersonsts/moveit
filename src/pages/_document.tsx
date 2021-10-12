@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:creator" content="Twitter Creator" key="twhandle" />
 
           <meta property="og:url" content="https://nextjs-app01-website-pbi7nqqjda-ue.a.run.app" key="ogurl" />
-          <meta property="og:image" content="favicon.png" key="ogimage" />
+          <meta property="og:image" content="icons/background.svg" key="ogimage" />
           <meta property="og:site_name" content="Move.it" key="ogsitename" />
           <meta property="og:title" content="Move.it" key="ogtitle" />
           <meta property="og:description" content="Move.it" key="ogdesc" />
