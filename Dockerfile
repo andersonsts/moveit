@@ -1,36 +1,25 @@
-# Install dependencies only when needed
-FROM node:alpine AS deps
+# Base image
+FROM node:14.15.4-alpine
 
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+# Create and change to the app directory
+WORKDIR /usr/app
 
-# Rebuild the source code only when needed
-FROM node:alpine AS builder
-WORKDIR /app
+# Copy application dependency manifests to the container image.
+# A wildcard is used to ensure copying both package.json AND package-lock.json 
+# (when available).
+# Copying this first prevents re-running npm install on every code change.
 COPY . .
-COPY --from=deps /app/node_modules ./node_modules
-RUN yarn build
 
-# Production image, copy all the files and run next
-FROM node:alpine AS runner
-WORKDIR /app
+# Install production dependencies.
+# If you add a package-lock.json, speed your build by switching to 'npm ci'.
+# RUN npm ci --only=production
+RUN npm install
 
-ENV NODE_ENV production
+# Run tests
+# RUN npm run test
 
-# You only need to copy next.config.js if you are NOT using the default configuration
-# COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+# Copy local code to the container image
+RUN npm run build
 
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-RUN chown -R nextjs:nodejs /app/.next
-USER nextjs
-
-EXPOSE 3000
-
-CMD ["yarn", "start"]
+# Run the web service on container startup.
+CMD ["npm","start"]
