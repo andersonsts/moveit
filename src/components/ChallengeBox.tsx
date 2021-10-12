@@ -19,6 +19,8 @@ export function ChallengeBox () {
     resetCountdown()
   }
 
+  // const activeChallenge = { amount: 80, type: 'eye', description: 'feafeafea' }
+
   return (
     <div className={styles.challengeBoxContainer}>
       {activeChallenge ? (
